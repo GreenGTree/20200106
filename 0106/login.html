@@ -35,6 +35,20 @@
       Author: BootstrapMade
       Author URL: https://bootstrapmade.com
     ======================================================= -->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDo2NaFtlExof9qxqoes--rCmprKDICycw",
+      authDomain: "ajax-w14.firebaseapp.com",
+      databaseURL: "https://ajax-w14.firebaseio.com",
+      projectId: "ajax-w14",
+      storageBucket: "ajax-w14.appspot.com",
+      messagingSenderId: "745856199458",
+    };
+    firebase.initializeApp(config);
+  </script>
     <script> 
         $(document).ready(function(){  
             $("#SignUp").click(function(){
@@ -76,7 +90,7 @@
                 <span class="pull-right"> <a href="#"> Forgot Password?</a></span>
             </label>
         <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
-        <button class="btn btn-info btn-lg btn-block" type="submit">Signup</button>
+        <button class="btn btn-info btn-lg btn-block" type="submit" id="SignUp">Signup</button>
       </div>
     </form>
     <div class="text-right">
