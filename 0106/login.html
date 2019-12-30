@@ -59,11 +59,11 @@
                   const errorCode = error.code;
                   const errorMessage = error.message;
                   // ...
-                  if(errorMessage=="The email address is already in use by another account."){
+                  // if(errorMessage=="The email address is already in use by another account."){
                     
-                  }else{
-                    alert(errorMessage);
-                  }
+                  // }else{
+                  //   alert(errorMessage);
+                  // }
                 }).then(function (error) { if (error.code != 400) alert("成功創建用戶認證！"); })
             });                         
         });         
