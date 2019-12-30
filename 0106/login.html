@@ -52,8 +52,8 @@
     <script> 
         $(document).ready(function(){  
             $("#SignUp").click(function(){
-                var email         = $('#email').val();
-                var password    = $('#pwd').val();
+                var email         = $('#emaill').val();
+                var password    = $('#pwdd').val();
                 firebase.auth().createUserWithEmailAndPassword(email, password).catch((error) => {
                   // Handle Errors here.
                   const errorCode = error.code;
@@ -79,11 +79,11 @@
         <p class="login-img"><i class="icon_lock_alt"></i></p>
         <div class="input-group">
           <span class="input-group-addon"><i class="icon_profile"></i></span>
-          <input type="text" class="form-control" id="email" placeholder="Email" autofocus>
+          <input type="text" class="form-control" id="emaill" placeholder="Email" autofocus>
         </div>
         <div class="input-group">
           <span class="input-group-addon"><i class="icon_key_alt"></i></span>
-          <input type="password" class="form-control" id="pwd"placeholder="Password">
+          <input type="password" class="form-control" id="pwdd"placeholder="Password">
         </div>
         <label class="checkbox">
                 <input type="checkbox" value="remember-me"> Remember me
