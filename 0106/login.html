@@ -67,7 +67,18 @@
                 }).then(function (error) { 
                     if (error.code != 400) alert("成功創建用戶認證！"); 
                     document.location.href="https://greengtree.github.io/20200106/0106/index.html";})
-            });                         
+            }); 
+            $("#SignIn").click(function(){
+                var email         = $('#email').val();
+                var password    = $('#pwd').val();
+                firebase.auth().signInWithEmailAndPassword(email, password).catch((error) => {
+              // Handle Errors here.
+              const errorCode = error.code;
+              const errorMessage = error.message;
+              // ...
+              alert(errorMessage)
+            })
+            });                        
         });         
     </script>
 </head>
