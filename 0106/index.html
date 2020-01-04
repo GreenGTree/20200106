@@ -54,7 +54,9 @@
     };
     firebase.initializeApp(config);
   </script>
-    <script>    
+    <script> 
+        $(document).ready(function(){  
+            
             var userLogin;
             firebase.auth().onAuthStateChanged(function(user) {
             if (user) {
