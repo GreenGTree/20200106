@@ -40,6 +40,35 @@
     Author: BootstrapMade
     Author URL: https://bootstrapmade.com
   ======================================================= -->
+   <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDo2NaFtlExof9qxqoes--rCmprKDICycw",
+      authDomain: "ajax-w14.firebaseapp.com",
+      databaseURL: "https://ajax-w14.firebaseio.com",
+      projectId: "ajax-w14",
+      storageBucket: "ajax-w14.appspot.com",
+      messagingSenderId: "745856199458",
+    };
+    firebase.initializeApp(config);
+  </script>
+    <script>    
+            var userLogin;
+            firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+              userLogin = user;
+              alert("User is logined");
+              document.location.href="https://greengtree.github.io/20200106/0106/index.html";
+            } else {
+              userLogin = null;
+              alert("User is not logined yet.");
+              document.location.href="https://greengtree.github.io/20200106/0106/login.html";
+            }
+      });                        
+        });         
+    </script>
 </head>
 
 <body>
