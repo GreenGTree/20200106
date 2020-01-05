@@ -64,7 +64,7 @@
             if (user) {
               userLogin = user;
               useremail = user.email;
-              document.getElementById("emailname").innerHTML=user.email ;
+              
               //alert("User is logined");
             } else {
               userLogin = null;
@@ -76,6 +76,7 @@
         function push(name, msg) {
           
           var key = db.ref('message/').push({
+            document.getElementById("emailname").innerHTML=user.email ;
             username: useremail,
             message: msg
           }).key;
