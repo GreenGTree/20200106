@@ -98,13 +98,14 @@
               })
               });   
             $("#push_test").click(function(){
+                document.getElementById("push_msg").innerHTML="" ;
                 var name         = $('#push_name').val();
                 var msg          = $('#push_msg').val();
                 push(name, msg);
             });  
             function display_msgs(data_val){
               document.getElementById("emailname").innerHTML=useremail ;
-              document.getElementById("push_msg").innerHTML="" ;
+              
               keys = Object.keys(data_val);
               msgs = '';
               
