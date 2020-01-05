@@ -56,8 +56,9 @@
     var db = firebase.database(); 
   </script>
     <script> 
+      var useremail
         $(document).ready(function(){  
-            var useremail;
+            ;
             var userLogin;
             firebase.auth().onAuthStateChanged(function(user) {
             if (user) {
@@ -71,18 +72,19 @@
               document.location.href="https://greengtree.github.io/20200106/0106/login.html";
             }
       });                        
-        });         
-    </script>
-    <script>
+        });
         function push(name, msg) {
           
           var key = db.ref('message/').push({
-            username: name,
+            username: useremail,
             message: msg
           }).key;
           //alert("Push key = "+key);
           
-        }        
+        }         
+    </script>
+    <script>
+                
         
         
         $(document).ready(function(){ 
