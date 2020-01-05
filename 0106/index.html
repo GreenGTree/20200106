@@ -74,9 +74,8 @@
       });                        
         });
         function push(name, msg) {
-          
+          document.getElementById("push_msg").innerHTML="" ;
           var key = db.ref('message/').push({
-
             username: useremail,
             message: msg
           }).key;
@@ -98,7 +97,6 @@
               })
               });   
             $("#push_test").click(function(){
-                document.getElementById("push_msg").innerHTML="" ;
                 var name         = $('#push_name').val();
                 var msg          = $('#push_msg').val();
                 push(name, msg);
