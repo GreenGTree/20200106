@@ -56,11 +56,12 @@
   </script>
     <script> 
         $(document).ready(function(){  
-            
+            var useremail;
             var userLogin;
             firebase.auth().onAuthStateChanged(function(user) {
             if (user) {
               userLogin = user;
+              useremail = user.email;
               //alert("User is logined");
             } else {
               userLogin = null;
@@ -103,7 +104,7 @@
         <ul class="nav pull-right top-menu">
 
           <!-- task notificatoin start -->
-          <li id="task_notificatoin_bar" class="dropdown">
+          <!-- <li id="task_notificatoin_bar" class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <i class="icon-task-l"></i>
                             <span class="badge bg-important">6</span>
@@ -185,7 +186,7 @@
                 <a href="#">See All Tasks</a>
               </li>
             </ul>
-          </li>
+          </li> -->
           <!-- task notificatoin end -->
           <!-- inbox notificatoin start-->
           <li id="mail_notificatoin_bar" class="dropdown">
@@ -302,9 +303,9 @@
           <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="profile-ava">
-                                <img alt="" src="img/avatar1_small.jpg">
+                                <!-- <img alt="" src="img/avatar1_small.jpg"> -->
                             </span>
-                            <span class="username">Jenifer Smith</span>
+                            <span class="username">Nothing</span>
                             <b class="caret"></b>
                         </a>
             <ul class="dropdown-menu extended logout">
@@ -347,7 +348,7 @@
           <li class="active">
             <a class="" href="index.html">
                           <i class="icon_house_alt"></i>
-                          <span>Dashboard</span>
+                          <span>聊天室</span>
                       </a>
           </li>
           <li class="sub-menu">
