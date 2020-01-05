@@ -49,18 +49,18 @@
     };
     firebase.initializeApp(config);
 
-    var storage = firebase.storage();
-//做一個簡單的檔案上傳器
- //……………………………………………………………………..
- var fileButton=document.getElementById(‘fileButton’);
-fileButton.addEventListener(“change”, function(e) {
-//檔案
- var file=e.target.files[0];
-//設定firebase上傳細節
- var storageRef = firebase.storage().ref(‘photo/’+file.name);
-//執行！
- storageRef.put(file);
-});
+//     var storage = firebase.storage();
+// //做一個簡單的檔案上傳器
+//  //……………………………………………………………………..
+//  var fileButton=document.getElementById(‘fileButton’);
+// fileButton.addEventListener(“change”, function(e) {
+// //檔案
+//  var file=e.target.files[0];
+// //設定firebase上傳細節
+//  var storageRef = firebase.storage().ref(‘photo/’+file.name);
+// //執行！
+//  storageRef.put(file);
+// });
   </script>
     <script> 
         $(document).ready(function(){  
