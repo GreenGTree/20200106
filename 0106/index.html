@@ -71,6 +71,38 @@
       });                        
         });         
     </script>
+    <script>
+        function push(name, msg) {
+          
+          var key = db.ref('message/').push({
+            username: name,
+            message: msg
+          }).key;
+          //alert("Push key = "+key);
+          
+        }        
+        
+        
+        $(document).ready(function(){ 
+            $("#push_test").click(function(){
+                var name         = user.email;
+                var msg          = $('#push_msg').val();
+                push(name, msg);
+            });  
+            function display_msgs(data_val){
+              keys = Object.keys(data_val);
+              msgs = '';
+              
+              for (var i = keys.length - 1; i >= 0; i--) {
+                msgs += data_val[keys[i]]['username'] +': '+ data_val[keys[i]]['message']+'<br>';
+              }
+              $('#data').html(msgs); 
+            }
+            db.ref('message/').on('value', function(snapshot) {
+              display_msgs(snapshot.val());
+            });  
+        });         
+    </script>
 </head>
 
 <body>
@@ -478,7 +510,9 @@
 
         </div>
         <!--/.row-->
-
+        <input type="text" id="push_msg"        placeholder="訊息"/>
+        <button id="push_test">Push</button><br><br>  
+        <label id="data"></label>
 
         
         <!-- project team & activity end -->
