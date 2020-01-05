@@ -64,7 +64,7 @@
             if (user) {
               userLogin = user;
               useremail = user.email;
-              document.getElementById("push_name").innerHTML=user.email ;
+              document.getElementById("emailname").innerHTML=user.email ;
               //alert("User is logined");
             } else {
               userLogin = null;
@@ -341,7 +341,7 @@
                             <span class="profile-ava">
                                 <!-- <img alt="" src="img/avatar1_small.jpg"> -->
                             </span>
-                            <span class="username">Nothing</span>
+                            <span class="username" id="emailname">Nothing</span>
                             <b class="caret"></b>
                         </a>
             <ul class="dropdown-menu extended logout">
