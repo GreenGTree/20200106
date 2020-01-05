@@ -74,9 +74,9 @@
       });                        
         });
         function push(name, msg) {
-          
+          document.getElementById("emailname").innerHTML=useremail ;
           var key = db.ref('message/').push({
-            document.getElementById("emailname").innerHTML=useremail ;
+            
             username: useremail,
             message: msg
           }).key;
