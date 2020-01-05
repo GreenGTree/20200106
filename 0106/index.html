@@ -62,6 +62,7 @@
             if (user) {
               userLogin = user;
               useremail = user.email;
+              document.getElementById("push_name").innerHTML=user.email ;
               //alert("User is logined");
             } else {
               userLogin = null;
@@ -85,7 +86,7 @@
         
         $(document).ready(function(){ 
             $("#push_test").click(function(){
-                var name         = user.email;
+                var name         = $('#push_name').val();
                 var msg          = $('#push_msg').val();
                 push(name, msg);
             });  
@@ -510,6 +511,7 @@
 
         </div>
         <!--/.row-->
+        <input type="text" id="push_name" disabled="true"       placeholder="暱稱"/>
         <input type="text" id="push_msg"        placeholder="訊息"/>
         <button id="push_test">Push</button><br><br>  
         <label id="data"></label>
