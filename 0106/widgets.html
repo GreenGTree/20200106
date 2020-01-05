@@ -36,6 +36,20 @@
       Author: BootstrapMade
       Author URL: https://bootstrapmade.com
     ======================================================= -->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDo2NaFtlExof9qxqoes--rCmprKDICycw",
+      authDomain: "ajax-w14.firebaseapp.com",
+      databaseURL: "https://ajax-w14.firebaseio.com",
+      projectId: "ajax-w14",
+      storageBucket: "ajax-w14.appspot.com",
+      messagingSenderId: "745856199458",
+    };
+    firebase.initializeApp(config);
+  </script>
 </head>
 
 <body>
@@ -394,7 +408,7 @@
             <ol class="breadcrumb">
               <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
               <li><i class="icon_genius"></i>Widgets</li>
-
+              <input type=”file” id=”fileButton” value=”upload”>
           </div>
         </div>
         <div class="row">
